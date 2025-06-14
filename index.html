@@ -1,98 +1,11 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Фотостудия Котиков</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЖДИ ДОКС</title>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">Фотостудия Котиков</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Переключить навигацию">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="#about">О нас</a></li>
-          <li class="nav-item"><a class="nav-link" href="#gallery">Галерея</a></li>
-          <li class="nav-item"><a class="nav-link" href="#booking">Запись на съёмку</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <section id="about" class="container py-5">
-    <h2 class="mb-4 text-center">О нас</h2>
-      <div class="about-description d-flex flex-column flex-md-row align-items-center gap-4">
-      <p class="flex-grow-1">
-        Добро пожаловать в нашу фотостудию, специализирующуюся на тематических съёмках, включая очаровательных котиков! Мы создаём уникальные и запоминающиеся фотографии, которые сохранят лучшие моменты.
-      </p>
-      <div class="about-image flex-shrink-0" style="width: 300px; height: 200px; overflow: hidden; border-radius: 8px;">
-        <img src="./db40cb6e46554fc51336c1e5346e3779.jpg" alt="Фото студии" style="width: 100%; height: 100%; object-fit: cover;" />
-      </div>
-    </div>
-  </section>
-
-  <section id="gallery" class="bg-light py-5">
-    <div class="container">
-      <h2 class="mb-4 text-center">Галерея котиков</h2>
-      <div class="gallery-grid d-flex flex-wrap justify-content-center gap-3">
-        <div class="gallery-item" style="width: 300px; height: 200px; overflow: hidden; border-radius: 8px;">
-          <img src="./9e9c00c4e0cf594e07fad6ca15dc3a53.jpg" alt="Фото котика 1" style="width: 100%; height: 100%; object-fit: cover;" />
-        </div>
-        <div class="gallery-item" style="width: 300px; height: 200px; overflow: hidden; border-radius: 8px;">
-          <img src="./c4f99ec784d1c9bb584f711c8951e0ca.jpg" alt="Фото котика 2" style="width: 100%; height: 100%; object-fit: cover;" />
-        </div>
-        <div class="gallery-item" style="width: 300px; height: 200px; overflow: hidden; border-radius: 8px;">
-          <img src="./c09c717002c89b046e8670f153ea32c9.jpg" alt="Фото котика 3" style="width: 100%; height: 100%; object-fit: cover;" />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="booking" class="container py-5">
-    <h2 class="mb-4 text-center">Запись на съёмку</h2>
-    <form id="bookingForm" novalidate>
-      <div class="mb-3">
-        <label for="name" class="form-label">Имя</label>
-        <input type="text" class="form-control" id="name" name="name" required minlength="2" />
-        <div class="invalid-feedback">Пожалуйста, введите ваше имя (минимум 2 символа).</div>
-      </div>
-      <div class="mb-3">
-        <label for="email" class="form-label">Email</label>
-        <input type="email" class="form-control" id="email" name="email" required />
-        <div class="invalid-feedback">Пожалуйста, введите корректный email.</div>
-      </div>
-      <div class="mb-3">
-        <label for="catName" class="form-label">Имя котика</label>
-        <input type="text" class="form-control" id="catName" name="catName" required minlength="1" />
-        <div class="invalid-feedback">Пожалуйста, введите имя котика.</div>
-      </div>
-      <button type="submit" class="btn btn-primary">Записаться</button>
-    </form>
-  </section>
-
-  <footer class="footer text-center text-white py-3">
-    @2025 фотостудия котиков
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    (() => {
-      'use strict';
-      const form = document.getElementById('bookingForm');
-      form.addEventListener('submit', event => {
-        if (!form.checkValidity()) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-        form.classList.add('was-validated');
-      }, false);
-    })();
-  </script>
+    <h3>ЖДИ ДОКС ТВАРЬ</h3>
 </body>
 </html>
