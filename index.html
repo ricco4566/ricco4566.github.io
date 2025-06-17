@@ -10,7 +10,7 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
     <div class="container">
-      <a class="navbar-brand" href="#">Фотостудия Котиков</a>
+      <a class="navbar-brand" href="#">🐱 Фотостудия Котиков</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
         aria-controls="navbarNav" aria-expanded="false" aria-label="Переключить навигацию">
         <span class="navbar-toggler-icon"></span>
@@ -27,9 +27,9 @@
 
   <section id="about" class="container py-5">
     <h2 class="mb-4 text-center">О нас</h2>
-      <div class="about-description d-flex flex-column flex-md-row align-items-center gap-4">
+    <div class="about-description d-flex flex-column flex-md-row align-items-center gap-4">
       <p class="flex-grow-1">
-        Добро пожаловать в нашу фотостудию, специализирующуюся на тематических съёмках, включая очаровательных котиков! Мы создаём уникальные и запоминающиеся фотографии, которые сохранят лучшие моменты.
+        Добро пожаловать в нашу фотостудию, специализирующуюся на тематических съёмках, включая очаровательных котиков! Мы создаём уникальные и запоминающиеся фотографии, которые сохранят лучшие моменты. Наша команда профессиональных фотографов работает с любовью к животным и вниманием к деталям.
       </p>
       <div class="about-image flex-shrink-0" style="width: 300px; height: 200px; overflow: hidden; border-radius: 8px;">
         <img src="./db40cb6e46554fc51336c1e5346e3779.jpg" alt="Фото студии" style="width: 100%; height: 100%; object-fit: cover;" />
@@ -40,15 +40,18 @@
   <section id="gallery" class="bg-light py-5">
     <div class="container">
       <h2 class="mb-4 text-center">Галерея котиков</h2>
-      <div class="gallery-grid d-flex flex-wrap justify-content-center gap-3">
-        <div class="gallery-item" style="width: 300px; height: 200px; overflow: hidden; border-radius: 8px;">
-          <img src="./9e9c00c4e0cf594e07fad6ca15dc3a53.jpg" alt="Фото котика 1" style="width: 100%; height: 100%; object-fit: cover;" />
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="./9e9c00c4e0cf594e07fad6ca15dc3a53.jpg" alt="Фото котика 1" />
         </div>
-        <div class="gallery-item" style="width: 300px; height: 200px; overflow: hidden; border-radius: 8px;">
-          <img src="./c4f99ec784d1c9bb584f711c8951e0ca.jpg" alt="Фото котика 2" style="width: 100%; height: 100%; object-fit: cover;" />
+        <div class="gallery-item">
+          <img src="./c4f99ec784d1c9bb584f711c8951e0ca.jpg" alt="Фото котика 2" />
         </div>
-        <div class="gallery-item" style="width: 300px; height: 200px; overflow: hidden; border-radius: 8px;">
-          <img src="./c09c717002c89b046e8670f153ea32c9.jpg" alt="Фото котика 3" style="width: 100%; height: 100%; object-fit: cover;" />
+        <div class="gallery-item">
+          <img src="./c09c717002c89b046e8670f153ea32c9.jpg" alt="Фото котика 3" />
+        </div>
+        <div class="gallery-item">
+          <img src="./8561985bacec7121a94c572257b4b6ca.jpg" alt="Фото котика 4" />
         </div>
       </div>
     </div>
@@ -57,41 +60,125 @@
   <section id="booking" class="container py-5">
     <h2 class="mb-4 text-center">Запись на съёмку</h2>
     <form id="bookingForm" novalidate>
-      <div class="mb-3">
-        <label for="name" class="form-label">Имя</label>
-        <input type="text" class="form-control" id="name" name="name" required minlength="2" />
+      <div class="form-group mb-3">
+        <label for="name" class="form-label">Имя *</label>
+        <input type="text" class="form-control" id="name" name="name" required minlength="2" placeholder="Введите ваше имя" />
         <div class="invalid-feedback">Пожалуйста, введите ваше имя (минимум 2 символа).</div>
       </div>
-      <div class="mb-3">
-        <label for="email" class="form-label">Email</label>
-        <input type="email" class="form-control" id="email" name="email" required />
+      
+      <div class="form-group mb-3">
+        <label for="email" class="form-label">Email *</label>
+        <input type="email" class="form-control" id="email" name="email" required placeholder="example@email.com" />
         <div class="invalid-feedback">Пожалуйста, введите корректный email.</div>
       </div>
-      <div class="mb-3">
-        <label for="catName" class="form-label">Имя котика</label>
-        <input type="text" class="form-control" id="catName" name="catName" required minlength="1" />
+      
+      <div class="form-group mb-3">
+        <label for="phone" class="form-label">Телефон</label>
+        <input type="tel" class="form-control" id="phone" name="phone" placeholder="+7 (999) 123-45-67" />
+      </div>
+      
+      <div class="form-group mb-3">
+        <label for="catName" class="form-label">Имя котика *</label>
+        <input type="text" class="form-control" id="catName" name="catName" required minlength="1" placeholder="Как зовут вашего питомца?" />
         <div class="invalid-feedback">Пожалуйста, введите имя котика.</div>
       </div>
-      <button type="submit" class="btn btn-primary">Записаться</button>
+      
+      <div class="form-group mb-3">
+        <label for="shootType" class="form-label">Тип съёмки</label>
+        <select class="form-control" id="shootType" name="shootType">
+          <option value="">Выберите тип съёмки</option>
+          <option value="portrait">Портретная съёмка</option>
+          <option value="lifestyle">Lifestyle съёмка</option>
+          <option value="themed">Тематическая съёмка</option>
+          <option value="family">Семейная съёмка с питомцем</option>
+        </select>
+      </div>
+      
+      <div class="form-group mb-4">
+        <label for="message" class="form-label">Дополнительные пожелания</label>
+        <textarea class="form-control" id="message" name="message" rows="4" placeholder="Расскажите о ваших пожеланиях к съёмке..."></textarea>
+      </div>
+      
+      <button type="submit" class="btn btn-primary">Записаться на съёмку</button>
     </form>
   </section>
 
   <footer class="footer text-center text-white py-3">
-    @2025 фотостудия котиков
+    <div class="container">
+      <p class="mb-0">© 2025 Фотостудия Котиков. Создаём незабываемые моменты с вашими питомцами.</p>
+    </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     (() => {
       'use strict';
+      
       const form = document.getElementById('bookingForm');
+      
+      // Enhanced form validation
       form.addEventListener('submit', event => {
+        event.preventDefault();
+        event.stopPropagation();
+        
         if (!form.checkValidity()) {
-          event.preventDefault();
-          event.stopPropagation();
+          form.classList.add('was-validated');
+          
+          // Add shake animation to invalid fields
+          const invalidFields = form.querySelectorAll(':invalid');
+          invalidFields.forEach(field => {
+            field.classList.add('is-invalid');
+            setTimeout(() => {
+              field.classList.remove('is-invalid');
+            }, 500);
+          });
+        } else {
+          // Success animation
+          const button = form.querySelector('button[type="submit"]');
+          const originalText = button.textContent;
+          button.textContent = '✓ Заявка отправлена!';
+          button.style.background = 'linear-gradient(135deg, #28a745, #20c997)';
+          
+          setTimeout(() => {
+            button.textContent = originalText;
+            button.style.background = '';
+            form.reset();
+            form.classList.remove('was-validated');
+          }, 3000);
         }
-        form.classList.add('was-validated');
       }, false);
+      
+      // Real-time validation feedback
+      const inputs = form.querySelectorAll('input, textarea, select');
+      inputs.forEach(input => {
+        input.addEventListener('blur', () => {
+          if (input.checkValidity()) {
+            input.classList.remove('is-invalid');
+            input.classList.add('is-valid');
+          }
+        });
+        
+        input.addEventListener('input', () => {
+          if (input.classList.contains('is-invalid')) {
+            if (input.checkValidity()) {
+              input.classList.remove('is-invalid');
+              input.classList.add('is-valid');
+            }
+          }
+        });
+      });
+      
+      // Gallery item click animation
+      const galleryItems = document.querySelectorAll('.gallery-item');
+      galleryItems.forEach(item => {
+        item.addEventListener('click', () => {
+          item.style.animation = 'pulse 0.6s ease';
+          setTimeout(() => {
+            item.style.animation = '';
+          }, 600);
+        });
+      });
+      
     })();
   </script>
 </body>
