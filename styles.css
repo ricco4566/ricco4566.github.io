@@ -40,7 +40,7 @@ body {
 
 .navbar-brand {
   font-weight: bold;
-  color: var(--main-color) !important;
+  color: #111;
   position: relative;
   overflow: hidden;
 }
