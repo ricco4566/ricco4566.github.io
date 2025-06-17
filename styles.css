@@ -1,3 +1,4 @@
+/* CSS Variables */
 :root {
   --main-color: #0d6efd;
   --secondary-color: #6c757d;
@@ -27,6 +28,7 @@ body {
   line-height: 1.6;
 }
 
+/* Sticky Navigation with animations */
 .navbar {
   background-color: var(--white);
   box-shadow: 0 2px 4px var(--shadow-light);
@@ -79,6 +81,7 @@ body {
   width: 100%;
 }
 
+/* About Section */
 .about-description {
   animation: fadeInUp 1s ease-out;
 }
@@ -115,6 +118,7 @@ body {
   transform: translateX(100%);
 }
 
+/* Gallery Grid Layout */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -164,7 +168,6 @@ body {
 }
 
 .gallery-item::after {
-  content: '👁️ Посмотреть';
   position: absolute;
   top: 50%;
   left: 50%;
@@ -197,6 +200,7 @@ body {
   transform: scale(1.1);
 }
 
+/* Enhanced Form Styling */
 form {
   max-width: 600px;
   margin: 0 auto;
@@ -255,6 +259,7 @@ form textarea:focus + label {
   color: var(--main-color);
 }
 
+/* Animated Submit Button */
 form button {
   background: linear-gradient(135deg, var(--main-color), var(--accent-color));
   border: none;
@@ -295,6 +300,7 @@ form button:active {
   transform: translateY(-1px);
 }
 
+/* Validation Styles */
 .invalid-feedback {
   color: #dc3545;
   font-size: 0.875rem;
@@ -306,6 +312,7 @@ form button:active {
   animation: shake 0.5s ease-in-out;
 }
 
+/* Footer */
 .footer {
   background: linear-gradient(135deg, #111, #333);
   color: var(--white);
@@ -325,6 +332,7 @@ form button:active {
   background: linear-gradient(90deg, transparent, var(--main-color), transparent);
 }
 
+/* Animations */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -348,6 +356,7 @@ form button:active {
   100% { transform: scale(1); }
 }
 
+/* Loading Animation for Gallery Items */
 .gallery-item {
   animation: fadeInUp 0.6s ease-out forwards;
 }
@@ -357,6 +366,9 @@ form button:active {
 .gallery-item:nth-child(3) { animation-delay: 0.3s; }
 .gallery-item:nth-child(4) { animation-delay: 0.4s; }
 
+/* Media Queries for Responsive Design */
+
+/* Large screens (desktops, 1200px and up) */
 @media (min-width: 1200px) {
   .container {
     max-width: 1140px;
