@@ -116,7 +116,6 @@
       
       const form = document.getElementById('bookingForm');
       
-      // Enhanced form validation
       form.addEventListener('submit', event => {
         event.preventDefault();
         event.stopPropagation();
@@ -124,7 +123,6 @@
         if (!form.checkValidity()) {
           form.classList.add('was-validated');
           
-          // Add shake animation to invalid fields
           const invalidFields = form.querySelectorAll(':invalid');
           invalidFields.forEach(field => {
             field.classList.add('is-invalid');
@@ -133,7 +131,6 @@
             }, 500);
           });
         } else {
-          // Success animation
           const button = form.querySelector('button[type="submit"]');
           const originalText = button.textContent;
           button.textContent = '✓ Заявка отправлена!';
@@ -148,7 +145,6 @@
         }
       }, false);
       
-      // Real-time validation feedback
       const inputs = form.querySelectorAll('input, textarea, select');
       inputs.forEach(input => {
         input.addEventListener('blur', () => {
@@ -168,7 +164,6 @@
         });
       });
       
-      // Gallery item click animation
       const galleryItems = document.querySelectorAll('.gallery-item');
       galleryItems.forEach(item => {
         item.addEventListener('click', () => {
